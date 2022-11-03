@@ -1,5 +1,5 @@
 .container{
-    width: 100%;
+    width: 95%;
     height: 170px;
     position: absolute;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
@@ -65,7 +65,7 @@ img{
 .right-side{
     display: flex;
     flex-direction: column;
-    width: 42rem;
+    width: 38rem;
     margin-top: 8px;
 }
 
@@ -95,7 +95,7 @@ img{
 
 .search-container{
     align-self: center;
-    margin-top: 20px;;
+    margin-top: 20px;
 }
 
 .search-bar{
@@ -114,5 +114,5 @@ img{
     border-radius: 0px 8px 8px 0px;
     border: 0px;
     padding: 19.4px;
-    color: #1351B4
+    color: #1351B4;
 }
