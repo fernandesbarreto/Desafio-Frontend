@@ -65,14 +65,14 @@ img{
 .right-side{
     display: flex;
     flex-direction: column;
-    width: 45rem;
+    width: 42rem;
     margin-top: 8px;
 }
 
 .right-side ul{
     display: flex;
     flex-direction: row;
-    width: 600px;
+    width: 550px;
     justify-content: space-around;
     list-style: none;
 }
@@ -86,9 +86,33 @@ img{
     font-family: 'Rawline';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
     display: flex;
     align-items: center;
     font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.search-container{
+    align-self: center;
+    margin-top: 20px;;
+}
+
+.search-bar{
+    background: #F8F8F8;
+    border-radius: 8px 0px 0px 8px;
+    border: 0px;
+    width: 415px;
+    height: 52px;
+    font-style: italic;
+    color: black;
+}
+
+.search-bar-form button{
+    margin-top: 0.1px;
+    background: #F8F8F8;
+    border-radius: 0px 8px 8px 0px;
+    border: 0px;
+    padding: 19.4px;
+    color: #1351B4
 }
