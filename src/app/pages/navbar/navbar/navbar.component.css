@@ -1,0 +1,94 @@
+.container{
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 36px 0px 36px;
+}
+
+.title{
+    margin-top: 16px;
+}
+
+img{
+    width: 20px;
+    height: auto;
+    padding: 12px 45px 12px 45px;
+    border: 0.5px solid black;
+    border-style: dashed;
+    margin-bottom: 8px;;
+}
+
+.text-holder{
+    font-family: 'Rawline';
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 8px;
+}
+
+.main-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-solid{
+    padding: 16px;
+    color: #1351B4;
+}
+
+.text-holder h3{
+    font-weight: 400;
+    font-size: 24.19px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #1351B4;
+    margin: 0px;
+}
+
+.text-holder h4{
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #555555;
+    margin: 0px;
+}
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    width: 45rem;
+    margin-top: 8px;
+}
+
+.right-side ul{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.right-side ul a{
+    text-decoration: none;
+    color: #1351B4;
+}
+
+.right-side ul li{
+    font-family: 'Rawline';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
