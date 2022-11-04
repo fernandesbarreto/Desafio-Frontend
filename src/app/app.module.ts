@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
 import { AppComponent } from './app.component';
 import { SignUpBoxComponent } from './components/sign-up-box/sign-up-box.component';
+import { ButtonCancelComponent } from './components/button/button-cancel/button-cancel.component';
 
 const routes: Routes = [
   {path:'home', component: LoginComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
     NavbarComponent,
     FooterComponent,
     SignUpPageComponent,
-    SignUpBoxComponent
+    SignUpBoxComponent,
+    ButtonCancelComponent
   ],
   imports: [
     BrowserModule,

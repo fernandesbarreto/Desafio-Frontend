@@ -1,6 +1,6 @@
 .singup-container{
     width: 792px;
-    height: 847px;
+    height: 880px;
     margin: 20px 0px 80px 0px;
     display: flex;
     flex-direction: column;
@@ -36,6 +36,22 @@
     color: black;
 }
 
+.custom-form select{
+    padding: 4px 4px 4px 16px;
+    background: white;
+    align-items: center;
+    width: 716px;
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #888888;
+    margin-top: 8px;
+    font-family: 'Rawline', FontAwesome;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;   
+    color: #888888;
+}
+
 ::-webkit-input-placeholder {
     font-style: italic;
 }
@@ -53,14 +69,67 @@ h3{
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
-    margin-top: -30px;
     margin-bottom: 50px;
 }
 
 .button-holder{
-    margin-top: -30px;
+    margin-top: -10px;
     display: flex;
     flex-direction: row;
     justify-content:end;
     gap: 20px;
+}
+
+.checkinput{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: -24px;
+}
+
+.checkinput .check{
+    margin: -32px 8px 0px 0px;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2670E8;
+    width: 20px;
+}
+
+@media only screen and (max-width: 800px){
+    .singup-container{
+        width: 110%;
+    }
+
+    .custom-form input{
+        width: 300px;
+        align-self: center;
+    }
+
+    .custom-form select{
+        width: 323px;
+        align-self: center;
+    }
+
+    .custom-form label{
+        margin-left: 20px;
+    }
+
+    .checkinput{
+        margin-left: 12px;
+    }
+
+    .checkinput h3{
+        font-size: 12px;
+    }
+
+    .button-holder{
+        justify-content: center;
+    }
 }

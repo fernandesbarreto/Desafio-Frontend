@@ -19,3 +19,9 @@
     border: 2px solid gray;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 800px){
+    .continue{
+        width: 120px;
+    }
+}
