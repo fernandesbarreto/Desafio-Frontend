@@ -1,26 +1,26 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<div class="singup-container">
-    <div style="margin-top: 45px;">
+<div class="signup-container">
+    <form style="margin-top: 45px;" #signupForm="ngForm" (ngSubmit)="getUser(signupForm.value)">
         <div class="custom-form">
-            <label for="user">Nome de Usuário</label>
-            <input id="user" type="text" placeholder="&#xf007;    Digite o seu nome de usuário">
+            <label for="username">Nome de Usuário</label>
+            <input id="username" ngModel type="text" name="username" placeholder="&#xf007;    Digite o seu nome de usuário">
         </div>
         <div class="custom-form">
             <label for="email">Email</label>
-            <input id="email" type="text" placeholder="&#xf0e0;    Digite o seu email">
+            <input id="email" ngModel type="text" name="email" placeholder="&#xf0e0;    Digite o seu email">
         </div>
         <div class="custom-form">
-            <label for="email">Confirme o seu Email</label>
-            <input id="email" type="text" placeholder="&#xf0e0;    Digite novamente o seu email">
+            <label for="email2">Confirme o seu Email</label>
+            <input id="email2" ngModel type="text" name="email2" placeholder="&#xf0e0;    Digite novamente o seu email">
         </div>
         <div class="custom-form">
             <label for="institution">Instituição</label>
-            <input id="institution" type="text" placeholder="&#xf1ad;    Digite o nome da sua instituição">
+            <input id="institution" ngModel type="text" name="institution" placeholder="&#xf1ad;    Digite o nome da sua instituição">
         </div>
         <div class="custom-form">
             <label for="position">Cargo</label>
-            <select id="position">
+            <select id="position" ngModel name="position">
                 <option>Selecione o seu cargo</option>
                 <option>Opção 1</option>
                 <option>Opção 2</option>
@@ -30,11 +30,11 @@
         </div>
         <div class="custom-form">
             <label for="pass">Senha</label>
-            <input id="pass" type="text" placeholder="&#xf084;   Escolha uma senha">
+            <input id="pass" ngModel type="text" name="pass" placeholder="&#xf084;   Escolha uma senha">
         </div>
         <div class="custom-form">
-            <label for="pass">Confirme a sua Senha</label>
-            <input id="pass" type="text" placeholder="&#xf084;   Digite a sua senha escolhida">
+            <label for="pass2">Confirme a sua Senha</label>
+            <input id="pass2" ngModel type="text" name="pass2" placeholder="&#xf084;   Digite a sua senha escolhida">
         </div>
         <div class="checkinput">
             <input type = "checkbox" name = "privacy" value = "privacy" class="check">
@@ -44,5 +44,5 @@
             <app-button-cancel></app-button-cancel>
             <continue-button></continue-button>
         </div>
-    </div>
+    </form>
 </div>

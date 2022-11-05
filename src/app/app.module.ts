@@ -12,6 +12,8 @@ import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component
 import { AppComponent } from './app.component';
 import { SignUpBoxComponent } from './components/sign-up-box/sign-up-box.component';
 import { ButtonCancelComponent } from './components/button/button-cancel/button-cancel.component';
+import { from } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path:'home', component: LoginComponent},
@@ -33,6 +35,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
