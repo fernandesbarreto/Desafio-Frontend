@@ -13,7 +13,8 @@ import { AppComponent } from './app.component';
 import { SignUpBoxComponent } from './components/sign-up-box/sign-up-box.component';
 import { ButtonCancelComponent } from './components/button/button-cancel/button-cancel.component';
 import { from } from 'rxjs';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { MessageComponent } from './components/message/message.component';
 
 const routes: Routes = [
   {path:'home', component: LoginComponent},
@@ -31,11 +32,13 @@ const routes: Routes = [
     FooterComponent,
     SignUpPageComponent,
     SignUpBoxComponent,
-    ButtonCancelComponent
+    ButtonCancelComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, 
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

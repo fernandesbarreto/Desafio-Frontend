@@ -1,26 +1,88 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <div class="signup-container">
-    <form style="margin-top: 45px;" #signupForm="ngForm" (ngSubmit)="getUser(signupForm.value)">
+    <form style="margin-top: 45px;" #signupForm="ngForm" [formGroup]="newAccountForm" (ngSubmit)="getUser(signupForm.value)">
         <div class="custom-form">
             <label for="username">Nome de Usuário</label>
-            <input id="username" ngModel type="text" name="username" placeholder="&#xf007;    Digite o seu nome de usuário">
+            <input 
+                id="username"
+                type="text"
+                name="username"
+                placeholder="&#xf007;    Digite o seu nome de usuário"
+                formControlName="username">
+            <app-message
+                *ngIf="
+                    newAccountForm.get('username')?.errors?.required &&
+                    newAccountForm.get('username')?.touched
+                "
+                message="Campo necessário">
+            </app-message>
         </div>
         <div class="custom-form">
             <label for="email">Email</label>
-            <input id="email" ngModel type="text" name="email" placeholder="&#xf0e0;    Digite o seu email">
+            <input 
+                id="email" 
+                type="text"
+                name="email"
+                placeholder="&#xf0e0;    Digite o seu email"
+                formControlName="email">
+            <app-message
+                *ngIf="
+                    newAccountForm.get('email')?.errors?.required &&
+                    newAccountForm.get('email')?.touched
+                "
+                message="Campo necessário">
+            </app-message>
+            <app-message
+                *ngIf="
+                    newAccountForm.get('email')?.errors?.email &&
+                    newAccountForm.get('email')?.touched
+                "
+                message="Digite um e-mail válido">
+            </app-message>
         </div>
         <div class="custom-form">
             <label for="email2">Confirme o seu Email</label>
-            <input id="email2" ngModel type="text" name="email2" placeholder="&#xf0e0;    Digite novamente o seu email">
+            <input
+                id="email2"
+                type="text"
+                name="email2"
+                placeholder="&#xf0e0;    Digite novamente o seu email"
+                formControlName="email">
+            <app-message
+                *ngIf="
+                    newAccountForm.get('email')?.errors?.required &&
+                    newAccountForm.get('email')?.touched
+                "
+                message="Campo necessário">
+            </app-message>
+            <app-message
+                *ngIf="
+                    newAccountForm.get('email')?.errors?.email &&
+                    newAccountForm.get('email')?.touched
+                "
+                message="Digite um e-mail válido">
+            </app-message>
         </div>
         <div class="custom-form">
             <label for="institution">Instituição</label>
-            <input id="institution" ngModel type="text" name="institution" placeholder="&#xf1ad;    Digite o nome da sua instituição">
+            <input
+                id="institution"
+                type="text"
+                name="institution"
+                placeholder="&#xf1ad;    Digite o nome da sua instituição"
+                formControlName="institution">
+            <app-message
+                *ngIf="
+                    newAccountForm.get('institution')?.errors?.required &&
+                    newAccountForm.get('institution')?.touched
+                "
+                message="Campo necessário">
+            </app-message>
         </div>
         <div class="custom-form">
             <label for="position">Cargo</label>
-            <select id="position" ngModel name="position">
+            <select id="position" name="position">
                 <option>Selecione o seu cargo</option>
                 <option>Opção 1</option>
                 <option>Opção 2</option>
@@ -30,11 +92,35 @@
         </div>
         <div class="custom-form">
             <label for="pass">Senha</label>
-            <input id="pass" ngModel type="text" name="pass" placeholder="&#xf084;   Escolha uma senha">
+            <input
+                id="pass"
+                type="text"
+                name="pass"
+                placeholder="&#xf084;   Escolha uma senha"
+                formControlName="pass">
+            <app-message
+                *ngIf="
+                newAccountForm.get('pass')?.errors?.required &&
+                newAccountForm.get('pass')?.touched
+                "
+                message="Campo necessário">
+            </app-message>
         </div>
         <div class="custom-form">
             <label for="pass2">Confirme a sua Senha</label>
-            <input id="pass2" ngModel type="text" name="pass2" placeholder="&#xf084;   Digite a sua senha escolhida">
+            <input
+                id="pass2"
+                type="text"
+                name="pass2"
+                placeholder="&#xf084;   Digite a sua senha escolhida"
+                formControlName="pass">
+            <app-message
+                *ngIf="
+                newAccountForm.get('pass')?.errors?.required &&
+                newAccountForm.get('pass')?.touched
+                "
+                message="Campo necessário">
+            </app-message>
         </div>
         <div class="checkinput">
             <input type = "checkbox" name = "privacy" value = "privacy" class="check">
