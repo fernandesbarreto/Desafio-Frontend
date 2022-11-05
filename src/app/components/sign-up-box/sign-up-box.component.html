@@ -94,10 +94,11 @@
             <label for="pass">Senha</label>
             <input
                 id="pass"
-                type="text"
+                [type]="show? 'text' : 'password'"
                 name="pass"
                 placeholder="&#xf084;   Escolha uma senha"
                 formControlName="pass">
+            <span (click)="showHidePass()"><i class="fa-solid" [ngClass]="{'fa-eye-slash' : show, 'fa-eye' : !show}"></i></span>
             <app-message
                 *ngIf="
                 newAccountForm.get('pass')?.errors?.required &&
@@ -110,11 +111,11 @@
             <label for="pass2">Confirme a sua Senha</label>
             <input
                 id="pass2"
-                [type]="show? 'text' : 'password'"
+                [type]="showConfirmation? 'text' : 'password'"
                 name="pass2"
                 placeholder="&#xf084;   Digite a sua senha escolhida"
                 formControlName="passConfirmation">
-            <span class="show-hide" (click)="showHidePass()"><i [ngClass]="show? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'"></i></span>
+            <span (click)="showHidePassConfirmation()"><i class="fa-solid" [ngClass]="{'fa-eye-slash' : show, 'fa-eye' : !show}"></i></span>
             <app-message
                 *ngIf="
                 newAccountForm.get('passConfirmation')?.errors?.required &&

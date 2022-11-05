@@ -104,6 +104,12 @@ h3{
     margin-top: 10px;
 }
 
+.custom-form span{
+    align-self: flex-end;
+    margin: -30px 15px 11px 0px;
+    color: #2670E8
+}
+
 @media only screen and (max-width: 800px){
     .signup-container{
         width: 110%;

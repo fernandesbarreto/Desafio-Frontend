@@ -10,6 +10,7 @@ import { NewUserService } from 'src/app/services/new-user.service';
 export class SignUpBoxComponent implements OnInit {
   newAccountForm: FormGroup;
   show: boolean = false;
+  showConfirmation: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -34,8 +35,11 @@ export class SignUpBoxComponent implements OnInit {
   }
 
   showHidePass(){
-    console.log(this.show)
     this.show = !this.show;
+  }
+
+  showHidePassConfirmation(){
+    this.showConfirmation = !this.showConfirmation;
   }
 
 }
