@@ -1,4 +1,5 @@
 # DesafioFrontend
+Desafio solicitado pelo processo seletivo do V-LAB. Responsividade, local storage, session storage, validação de formulário e página de usuário logado.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
