@@ -48,18 +48,18 @@
                 type="text"
                 name="email2"
                 placeholder="&#xf0e0;    Digite novamente o seu email"
-                formControlName="email">
+                formControlName="emailConfirmation">
             <app-message
                 *ngIf="
-                    newAccountForm.get('email')?.errors?.required &&
-                    newAccountForm.get('email')?.touched
+                    newAccountForm.get('emailConfirmation')?.errors?.required &&
+                    newAccountForm.get('emailConfirmation')?.touched
                 "
                 message="Campo necessário">
             </app-message>
             <app-message
                 *ngIf="
-                    newAccountForm.get('email')?.errors?.email &&
-                    newAccountForm.get('email')?.touched
+                    newAccountForm.get('emailConfirmation')?.errors?.email &&
+                    newAccountForm.get('emailConfirmation')?.touched
                 "
                 message="Digite um e-mail válido">
             </app-message>
@@ -110,14 +110,15 @@
             <label for="pass2">Confirme a sua Senha</label>
             <input
                 id="pass2"
-                type="text"
+                [type]="show? 'text' : 'password'"
                 name="pass2"
                 placeholder="&#xf084;   Digite a sua senha escolhida"
-                formControlName="pass">
+                formControlName="passConfirmation">
+            <span class="show-hide" (click)="showHidePass()"><i [ngClass]="show? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'"></i></span>
             <app-message
                 *ngIf="
-                newAccountForm.get('pass')?.errors?.required &&
-                newAccountForm.get('pass')?.touched
+                newAccountForm.get('passConfirmation')?.errors?.required &&
+                newAccountForm.get('passConfirmation')?.touched
                 "
                 message="Campo necessário">
             </app-message>

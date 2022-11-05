@@ -9,6 +9,7 @@ import { NewUserService } from 'src/app/services/new-user.service';
 })
 export class SignUpBoxComponent implements OnInit {
   newAccountForm: FormGroup;
+  show: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -30,6 +31,11 @@ export class SignUpBoxComponent implements OnInit {
     if(formValues.email == formValues.email2 && formValues.pass == formValues.pass2){
       this.newUserService.signUpUser(formValues)
     }
+  }
+
+  showHidePass(){
+    console.log(this.show)
+    this.show = !this.show;
   }
 
 }

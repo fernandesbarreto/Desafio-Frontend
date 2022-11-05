@@ -100,6 +100,8 @@ h3{
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #2670E8;
     width: 20px;
+    height: 20px;
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 800px){
