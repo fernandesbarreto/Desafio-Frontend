@@ -24,12 +24,15 @@ export class SignUpBoxComponent implements OnInit {
       emailConfirmation: ['', [Validators.required, Validators.email]],
       pass: ['', [Validators.required, Validators.minLength(4)]],
       passConfirmation: ['', [Validators.required, Validators.minLength(4)]],
-      institution: ['', [Validators.required, Validators.minLength(2)]]
+      institution: ['', [Validators.required, Validators.minLength(2)]],
+      position: [''],
+      terms: [false]
     });
   }
 
   getUser(formValues: any){
-    if(formValues.email == formValues.emailConfirmation && formValues.pass == formValues.passConfirmation){
+    console.log(formValues.terms)
+    if(formValues.email == formValues.emailConfirmation && formValues.pass == formValues.passConfirmation && formValues.terms){
       this.newUserService.signUpUser(formValues)
       window.location.href=''
     }

@@ -82,12 +82,12 @@
         </div>
         <div class="custom-form">
             <label for="position">Cargo</label>
-            <select id="position" name="position">
+            <select id="position" name="position" formControlName="position">
                 <option>Selecione o seu cargo</option>
-                <option>Opção 1</option>
-                <option>Opção 2</option>
-                <option>Opção 3</option>
-                <option>Opção 4</option>
+                <option>Desenvolvedor</option>
+                <option>Design</option>
+                <option>Analista de dados</option>
+                <option>Quality Assurance</option>
             </select>
         </div>
         <div class="custom-form">
@@ -125,12 +125,17 @@
             </app-message>
         </div>
         <div class="checkinput">
-            <input type = "checkbox" name = "privacy" value = "privacy" class="check">
+            <input 
+                type = "checkbox"
+                name = "privacy"
+                value = "privacy"
+                class="check"
+                formControlName="terms">
             <h3>Aceito os <a href="#">Termos de Uso e Política de Privacidade</a></h3>
         </div>
         <div class="button-holder">
             <app-button-cancel></app-button-cancel>
-            <continue-button></continue-button>
+            <continue-button [attr.disabled]="!newAccountForm.get('terms')" formControlName="continue"></continue-button>
         </div>
     </form>
 </div>
