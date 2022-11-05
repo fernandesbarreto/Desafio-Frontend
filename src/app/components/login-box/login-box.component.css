@@ -71,3 +71,9 @@ a h3{
     flex-direction: row;
     justify-content: space-around;
 }
+
+.custom-form span{
+    align-self: flex-end;
+    margin: -33px 15px 11px 0px;
+    color: #2670E8
+}

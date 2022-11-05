@@ -23,6 +23,7 @@
 
 @media only screen and (max-width: 800px){
     .continue{
-        width: 120px;
+        width: 130px;
+        font-size: 12px;
     }
 }

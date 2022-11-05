@@ -9,7 +9,12 @@
         </div>
         <div class="custom-form">
             <label for="pass">Senha</label>
-            <input id="pass" type="text" placeholder="&#xf084;   Digite a sua senha atual">
+            <input
+                id="pass"
+                [type]="show? 'text' : 'password'"
+                name="pass"
+                placeholder="&#xf084;   Digite a sua senha atual">
+            <span (click)="showHidePass()"><i class="fa-solid" [ngClass]="{'fa-eye-slash' : show, 'fa-eye' : !show}"></i></span>
         </div>
         <a href="#"><h3>Esqueci minha senha</h3></a>
         <div class="button-holder">
