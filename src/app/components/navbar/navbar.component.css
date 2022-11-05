@@ -43,6 +43,11 @@ img{
     color: #1351B4;
 }
 
+.fa-bars{
+    padding: 16px;
+    color: #1351B4;
+}
+
 .text-holder h3{
     font-weight: 400;
     font-size: 24.19px;
@@ -56,6 +61,7 @@ img{
 .text-holder h4{
     font-weight: 400;
     font-size: 14px;
+    width: 180px;
     display: flex;
     align-items: center;
     font-feature-settings: 'pnum' on, 'lnum' on;
@@ -80,6 +86,11 @@ img{
 }
 
 @media only screen and (max-width: 800px){
+    .container{
+        display: flex;
+        width: 90%;
+    }
+
     .text-holder h3{
         font-size: 24px;
     }
@@ -98,6 +109,7 @@ img{
 
     .right-mobile{
         display: flex;
+        margin-right: 30px;
     }
 
     .right-mobile h4{
@@ -106,6 +118,8 @@ img{
         font-family: 'Font Awesome 5 Free';
         font-style: normal;
         font-weight: 900;
+        margin: 20px;
+        margin-top: 10px;
     }
 }
 
