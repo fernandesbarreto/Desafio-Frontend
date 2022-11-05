@@ -15,11 +15,13 @@ import { ButtonCancelComponent } from './components/button/button-cancel/button-
 import { from } from 'rxjs';
 import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MessageComponent } from './components/message/message.component';
+import { LoggedInPageComponent } from './pages/logged-in-page/logged-in-page.component';
 
 const routes: Routes = [
   {path:'home', component: LoginComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path:'signup', component: SignUpPageComponent}
+  {path:'signup', component: SignUpPageComponent},
+  {path:'loggedin', component: LoggedInPageComponent}
 ]
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ const routes: Routes = [
     SignUpPageComponent,
     SignUpBoxComponent,
     ButtonCancelComponent,
-    MessageComponent
+    MessageComponent,
+    LoggedInPageComponent
   ],
   imports: [
     BrowserModule,

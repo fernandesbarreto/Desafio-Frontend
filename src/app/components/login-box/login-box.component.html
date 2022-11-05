@@ -2,10 +2,14 @@
 
 <div class="login-container">
     <h2 class="title">Identifique-se com:</h2>
-    <div style="margin-top: 45px;">
+    <form style="margin-top: 45px;" #loginForm="ngForm" [formGroup]="accountForm" (ngSubmit)="checkUser(loginForm.value)">
         <div class="custom-form">
             <label for="user">Nome de Usuário</label>
-            <input id="user" type="text" placeholder="&#xf007;    Digite o seu nome de usuário">
+            <input
+                id="user"
+                type="text"
+                placeholder="&#xf007;    Digite o seu nome de usuário"
+                formControlName="user">
         </div>
         <div class="custom-form">
             <label for="pass">Senha</label>
@@ -13,7 +17,8 @@
                 id="pass"
                 [type]="show? 'text' : 'password'"
                 name="pass"
-                placeholder="&#xf084;   Digite a sua senha atual">
+                placeholder="&#xf084;   Digite a sua senha atual"
+                formControlName="pass">
             <span (click)="showHidePass()"><i class="fa-solid" [ngClass]="{'fa-eye-slash' : show, 'fa-eye' : !show}"></i></span>
         </div>
         <a href="#"><h3>Esqueci minha senha</h3></a>
@@ -21,5 +26,5 @@
             <sign-in-button></sign-in-button>
             <continue-button></continue-button>
         </div>
-    </div>
+    </form>
 </div>

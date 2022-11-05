@@ -1,0 +1,48 @@
+.container{
+    height: 600px;
+    padding-top: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+}
+
+.title{
+    font-family: 'Rawline';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 41.8px;
+    line-height: 58px;
+    color: #000000;
+    margin: auto;
+}
+
+.goback{
+    background: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 170px;
+    padding: 6px 24px 6px 24px;
+    border: 2px solid #1351B4;
+    color: #1351B4;
+    font-family: 'Rawline';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;  
+    transition-duration: 0.1s; 
+}
+
+.goback:hover {
+    background: gray;
+    border: 2px solid gray;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px){
+    .goback{
+        width: 130px;
+    }
+}

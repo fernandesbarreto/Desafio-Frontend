@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NewUserService } from 'src/app/services/new-user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-sign-up-box',
@@ -14,7 +14,7 @@ export class SignUpBoxComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private newUserService: NewUserService
+    private newUserService: UserService
   ) { }
 
   ngOnInit(): void {
@@ -29,8 +29,9 @@ export class SignUpBoxComponent implements OnInit {
   }
 
   getUser(formValues: any){
-    if(formValues.email == formValues.email2 && formValues.pass == formValues.pass2){
+    if(formValues.email == formValues.emailConfirmation && formValues.pass == formValues.passConfirmation){
       this.newUserService.signUpUser(formValues)
+      window.location.href=''
     }
   }
 
